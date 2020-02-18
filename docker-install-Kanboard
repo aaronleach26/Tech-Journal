@@ -1,0 +1,9 @@
+# Installing Kanboard
+* First make sure the system is a web server with PHP installed
+* Then, make a directory labeled kanboard with a file docker-compose.yml in it
+* Have the file formatted like [docker-compose.yml](https://github.com/aaronleach26/Tech-Journal/blob/master/docker-compose.yml)
+* Run docker-compose up -d to start the service
+* Make sure correct port is open on the firewall
+# Using Kanboard
+* Access through the web interface from mgmt01 or wks01 at docker01-yourname
+* Username and password are admin/admin
