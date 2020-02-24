@@ -1,7 +1,7 @@
 #secure-ssh.sh
 #author aaronleach26
 #creates a new ssh user using $l parameter
-#adds a public key from the lcoal repo or curled from the remote repo
+#adds a public key from the local repo or curled from the remote repo
 #removes root ability to shh in
 
 useradd -m -d /home/$1 -s /bin/bash $1
