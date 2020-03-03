@@ -1,0 +1,2 @@
+deployer	ALL=(ALL)	NOPASSWD: ALL
+aaron		ALL=(ALL)	NOPASSWD: ALL
