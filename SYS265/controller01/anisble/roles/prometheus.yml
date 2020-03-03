@@ -1,0 +1,13 @@
+---
+        - hosts: ansible01-aaron
+          roles:
+          - cloudalchemy.prometheus
+          vars:
+                  prometheus_targets:
+                          node:
+                          - targets:
+                                  - localhost:9100
+                                  - demo.cloudalchemy.org:9100
+                            labels:
+                             env: demosite
+

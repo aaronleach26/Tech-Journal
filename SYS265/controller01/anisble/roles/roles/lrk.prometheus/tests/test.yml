@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars:
+    prometheus_components:
+      - prometheus
+      - alertmanager
+      - node_exporter
+
+  roles:
+    - role_under_test

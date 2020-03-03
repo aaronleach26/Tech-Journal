@@ -1,0 +1,7 @@
+---
+        - hosts: ansible01-aaron
+          become: true
+          roles:
+                  - lrk.prometheus
+
+

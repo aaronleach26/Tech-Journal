@@ -1,0 +1,11 @@
+ansible01-aaron
+[webmin]
+ansible02-aaron
+[windows]
+mgmt01-aaron
+[windows:vars]
+ansible_user=aaron.leach-adm@aaron.local
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ntlm
+ansible_winrm_port=5986

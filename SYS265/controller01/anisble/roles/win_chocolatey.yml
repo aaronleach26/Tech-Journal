@@ -1,0 +1,9 @@
+---
+- name: install windowd applications
+  hosts: windows
+  tasks:
+     - name: Install Notepad++
+       win_chocolatey:
+          name:
+          - notepadplusplus
+          state: present

@@ -1,0 +1,13 @@
+[Unit] 
+Description=Webmin
+Requires=local-fs.target 
+After=basic.target
+Conflicts=shutdown.target 
+[Service] 
+Type=oneshot
+RemainAfterExit=yes 
+ExecStart={{ webmin_dir }}/start 
+ExecStop={{ webmin_dir }}/stop 
+ExecReload={{ webmin_dir }}/reload 
+[Install] 
+WantedBy=multi-user.target

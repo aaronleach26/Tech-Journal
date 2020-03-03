@@ -1,0 +1,10 @@
+---
+# tasks file for webmin #
+
+- name: Install webmin
+  include: webmin.yml
+  when: not uninstall_webmin
+
+- name: Uninstall webmin
+  include: uninstall.yml
+  when: uninstall_webmin

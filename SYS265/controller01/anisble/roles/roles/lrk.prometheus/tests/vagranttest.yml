@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: true
+  vars:
+    prometheus_components:
+      - prometheus
+      - alertmanager
+      - node_exporter
+      
+  roles:
+    - ansible-prometheus
