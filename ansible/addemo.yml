@@ -1,0 +1,14 @@
+---
+ - hosts: dc1
+   tasks:
+       - name: create new AD user
+         win_domain_user:
+                 name: ansible
+                 firstname: ansi
+                 surname: ble
+                 password: SuperSecure3!
+                 domain_username: FINAL\benjamin.schutzman-a
+                 domain_password: v8d6FXRapT!
+                 domain_server: dc1.final.local
+                 state: present
+

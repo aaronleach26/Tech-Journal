@@ -1,0 +1,14 @@
+[centos]
+dhcp1-final
+dhcp2-final
+util01-final
+[ubuntu]
+docker01-final
+[windows]
+dc1
+[windows:vars]
+ansible_user=benjamin.schutzman-adm@final.local
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ntlm
+ansible_winrm_port=5986

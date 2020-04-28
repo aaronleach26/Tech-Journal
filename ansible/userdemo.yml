@@ -1,0 +1,11 @@
+---
+ - hosts: dhcp1-final
+   become: true
+   tasks:
+       - name: create new user
+         user:
+                 name: test6
+                 generate_ssh_key: yes
+                 state: present
+                 password: $6$mysecretsalt$EDJBe8bLUKjct3jRv7d.D3RFGjkJJ7NnK0zve2AYB2TV5Cv48lWvAfRuGqjf8e6DNFWdKpa82Lcx1VUPK6R1k.
+

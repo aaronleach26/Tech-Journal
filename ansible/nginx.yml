@@ -1,0 +1,6 @@
+---
+  - name: nginx deployment
+    hosts: util01-final
+    become: true
+    roles:
+    - geerlingguy.nginx 

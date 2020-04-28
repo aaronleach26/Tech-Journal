@@ -1,0 +1,9 @@
+---
+ - hosts: [centos]
+   become: true
+   tasks:
+     - name: install yum package
+       yum:
+         name: tree
+         state: latest
+
