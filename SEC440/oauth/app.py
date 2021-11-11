@@ -2,6 +2,7 @@ from requests_oauthlib import OAuth2Session
 from flask import Flask, request, redirect, session, url_for
 from flask.json import jsonify
 import os
+import json
 
 app = Flask(__name__)
 
@@ -13,6 +14,13 @@ client_secret = "<your client secret>"
 authorization_base_url = 'https://github.com/login/oauth/authorize'
 token_url = 'https://github.com/login/oauth/access_token'
 
+fileObject = open("creds.json", "r")
+jsoncontent = jsonfile.read()
+creds = json.loads(jsoncontent)
+client_id = creds['client_id']
+client_secret = creds['client_secret']
+authorization_base_url = creds['authorization_base_url']
+token_url= creds['token_url']
 
 @app.route("/")
 def demo():
@@ -65,4 +73,7 @@ if __name__ == "__main__":
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = "1"
 
     app.secret_key = os.urandom(24)
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(ssl_context="adhoc")
+    # Making app listen on all addresses
+    app.run(ssl_context="adhoc", host="0.0.0.0")
