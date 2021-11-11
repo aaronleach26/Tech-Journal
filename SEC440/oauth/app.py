@@ -76,4 +76,4 @@ if __name__ == "__main__":
     # app.run(debug=True)
     app.run(ssl_context="adhoc")
     # Making app listen on all addresses
-    app.run(ssl_context="adhoc", host="0.0.0.0")
+    # app.run(ssl_context="adhoc", host="0.0.0.0")
