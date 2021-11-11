@@ -15,7 +15,7 @@ authorization_base_url = 'https://github.com/login/oauth/authorize'
 token_url = 'https://github.com/login/oauth/access_token'
 
 fileObject = open("creds.json", "r")
-jsoncontent = jsonfile.read()
+jsoncontent = fileObject.read()
 creds = json.loads(jsoncontent)
 client_id = creds['client_id']
 client_secret = creds['client_secret']
